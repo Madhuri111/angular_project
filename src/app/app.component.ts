@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'custom_structural';
+  open = false;
+
+  close() {
+    this.open = false;
+  }
 }
