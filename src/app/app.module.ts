@@ -13,15 +13,32 @@ import { ImpPipePipe } from './impure-pipes/imp-pipe.pipe';
 import { ChangeComponent } from './change/change.component';
 import { FormsModule } from '@angular/forms';
 import { IfDirective } from './custom/if.directive';
+import { TemplateFormComponent } from './template-form/template-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 // import { ImpPipePipe } from './impure-pipes/imp-pipe.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatCardModule} from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input'
+import { MatButtonModule } from '@angular/material/button';
+
 @NgModule({
-  declarations: [HighlightPipe,AppComponent,CustomComponent,DynamicComponent,ImpurePipesComponent,PipesComponent, ImpPipePipe, ChangeComponent, IfDirective],
-  imports: [
+  declarations: [HighlightPipe,AppComponent,CustomComponent,DynamicComponent,ImpurePipesComponent,PipesComponent, ImpPipePipe, ChangeComponent, IfDirective, TemplateFormComponent, ReactiveFormComponent],
+  imports: [ 
+    MatButtonModule,
+    MatInputModule, 
     CommonModule,
     AppRoutingModule,
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot([])
+    ReactiveFormsModule,
+    RouterModule.forRoot([]),
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatCardModule,
+    MatFormFieldModule
 
   ],
   bootstrap: [ AppComponent ]
