@@ -1,0 +1,56 @@
+<div >
+  <form class="madhuri" (ngSubmit)="onSubmit()" [formGroup]="formG">
+    <div class="myform">
+      <!-- enable it only if formfields are created -->
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Student</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div *ngFor="let formField of formFields" class="form-group">
+            <app-createform [input]="formField" [form]="formG"></app-createform>
+          </div>
+        </mat-card-content>
+
+        <!-- <div class="form-group">
+          <mat-card-actions> </mat-card-actions>
+        </div> -->
+      </mat-card>
+    </div>
+
+    <!-- <button mat-button type="add" mat-raised-button color="primary" (click)="onAdd()">Add
+        
+      </button>
+      <h3>Here's the payload</h3><br>{{payLoad}} -->
+    <div class="mybuttons">
+      <button
+        mat-button
+        type="add"
+        mat-raised-button
+        color="primary"
+        (click)="onAdd()"
+      >
+        Add
+
+        <!-- <a routerLink="/modelform">Add </a> -->
+      </button>
+      &nbsp;
+      &nbsp;
+      <button
+        mat-button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        [disabled]="formG.invalid"
+      >
+        Save
+      </button>
+    </div>
+    <!-- </div> -->
+  </form>
+</div>
+<!--   
+    <div *ngIf="payLoad" class="form-group">
+      <strong>Here's the payload</strong><br>{{payLoad}}
+    </div>
+  </div> -->

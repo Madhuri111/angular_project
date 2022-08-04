@@ -1,0 +1,29 @@
+.myform{
+    /* padding-left: 100px; */
+    /* padding-right: 100px; */
+
+    margin:auto;
+    width: 40%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    /* white-space: nowrap; */
+    /* display: inline; */
+    overflow: hidden;
+}
+
+.madhuri{
+    /* white-space: nowrap; */
+    display: inline;
+}
+
+.mybuttons {
+    top: 4%;
+    right: 5%;
+    position: absolute;
+    /* padding-top: 1000px; */
+    padding-left: 0px;
+    display: inline;
+    /* padding-bottom: 1000px; */
+}

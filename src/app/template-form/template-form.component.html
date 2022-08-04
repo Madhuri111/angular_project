@@ -1,4 +1,3 @@
-<p>template-form works!</p>
 
 <!-- these are forms which are handled in our template file -->
 <!-- forms which are handled in template file -->
@@ -8,7 +7,7 @@
 <!-- every form field should have a name attribute and ngModel attached to it -->
 <!-- will be useful for max 8-10 fields,if we have large forms use reactive forms -->
 
-<form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
+<form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)" class="form-container">
     <mat-card>
         <mat-card-content>
             <mat-form-field>

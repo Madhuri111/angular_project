@@ -1,9 +1,18 @@
 
+<div class="sidebar-opener" (click)="sidebarShow = !sidebarShow">
+  Click here
+</div>
 
+<div class="sidebar-slider" [class.sidebar-slide-in]="sidebarShow">
+  <div
+      class="sidebar-close"
+      (click)="sidebarShow = !sidebarShow"
+  >
 
-<div class="dropdown">
-  <button class="btn"> Tasks</button>
-  <div class="dropdown-content">
+<!-- <div class="dropdown"> -->
+  <div class="sidebar-content">
+  <!-- <button class="btn"> Tasks</button> -->
+  <!-- <div class="dropdown-content"> -->
     <a routerLink="/pipes" >Custom Pipes</a>
     <a routerLink="/dynamic" > Dynamic Components</a>
     <a routerLink="/impure" >Impure pipes</a>
@@ -11,10 +20,15 @@
     <a routerLink="/custom">Custom Structural Directive</a>
     <a routerLink="/forms">Reactive Forms</a>
     <a routerLink="/template">Template Driven Forms</a>
-
+    <a routerLink="/dynamicforms">Dynamic Forms</a>
+    <a routerLink="/modelform"> Model Form</a>
+    
   </div>
 </div>
+</div>
+
 
 <div class="container">
   <router-outlet></router-outlet>
 </div>
+

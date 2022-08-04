@@ -13,6 +13,7 @@ import { ImpPipePipe } from './impure-pipes/imp-pipe.pipe';
 import { ChangeComponent } from './change/change.component';
 import { FormsModule } from '@angular/forms';
 import { IfDirective } from './custom/if.directive';
+import { MatNativeDateModule } from '@angular/material/core';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 // import { ImpPipePipe } from './impure-pipes/imp-pipe.pipe';
@@ -23,12 +24,35 @@ import {MatCardModule} from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input'
 import { MatButtonModule } from '@angular/material/button';
+// import { DynamicFormsComponent } from './dynamic-forms/dynamic-forms.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import { MatOptionModule } from '@angular/material/core';
+import { TryComponent } from './try/try.component';
+import { CreateformComponent } from './createform/createform.component';
+// import { CreateformComponent } from './createform/createform.component';
+
+import { Basictemplate } from './createform/basictemplate.component';
+import { FinalFormComponent } from './final-form/final-form.component';
+import { MatSelectionList } from '@angular/material/list';
+import { PickerModule } from '@ctrl/ngx-emoji-mart';
+import { MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
-  declarations: [HighlightPipe,AppComponent,CustomComponent,DynamicComponent,ImpurePipesComponent,PipesComponent, ImpPipePipe, ChangeComponent, IfDirective, TemplateFormComponent, ReactiveFormComponent],
-  imports: [ 
+  declarations: [Basictemplate, HighlightPipe,TryComponent,AppComponent,CustomComponent,DynamicComponent,ImpurePipesComponent,PipesComponent, ImpPipePipe, ChangeComponent, IfDirective, TemplateFormComponent, ReactiveFormComponent,  TryComponent, CreateformComponent, FinalFormComponent],
+  imports: [
+    PickerModule, 
     MatButtonModule,
+    MatRadioModule,
+    MatCheckboxModule,
     MatInputModule, 
+    MatSelectModule,
+    MatNativeDateModule,
+    MatListModule,
+    MatOptionModule,
+    MatSidenavModule,
     CommonModule,
     AppRoutingModule,
     BrowserModule,

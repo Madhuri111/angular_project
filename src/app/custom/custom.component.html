@@ -1,4 +1,3 @@
-<p>custom works!</p>
 <!-- gonna create a structural directive which will work just like ngIf directive -->
 <!-- Attribute directives listen to and modify the behavior of other HTML elements, attributes, properties, and components.
 
@@ -6,7 +5,8 @@ Structural directives are directives which change the DOM layout by adding and r
 like ngIf -->
 
 
-<div>
+<div class="mad">
+<div >
     <button class="btn btn-primary" (click)="isAvailable = !isAvailable">
         Toggle the condition
     </button>
@@ -15,5 +15,6 @@ like ngIf -->
     This condition enables with custom structural directive
 </div>
 
+</div>
 <!-- templateRef will come if we represent it as structural directive => [] -->
 <!-- elementref will come if we represent it as attribute directive => * -->

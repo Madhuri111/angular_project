@@ -9,7 +9,7 @@ export class PipesComponent  {
 
   title = 'custom_pipes';
 
-  user =null;
+  // user =null;
 
   colors=['blue','white','green']
 
