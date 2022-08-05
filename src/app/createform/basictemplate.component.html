@@ -1,4 +1,5 @@
 <div >
+  <!-- <div formArrayName="finalform"> -->
   <form class="madhuri" (ngSubmit)="onSubmit()" [formGroup]="formG">
     <div class="myform">
       <!-- enable it only if formfields are created -->
@@ -7,8 +8,10 @@
           <mat-card-title>Student</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          <div *ngFor="let formField of formFields" class="form-group">
+          <div formArrayName="finalform"   >
+          <div  *ngFor="let formField of formFields" class="form-group">
             <app-createform [input]="formField" [form]="formG"></app-createform>
+          </div>
           </div>
         </mat-card-content>
 
@@ -17,6 +20,7 @@
         </div> -->
       </mat-card>
     </div>
+  <!-- </div> -->
 
     <!-- <button mat-button type="add" mat-raised-button color="primary" (click)="onAdd()">Add
         
@@ -28,6 +32,7 @@
         type="add"
         mat-raised-button
         color="primary"
+        [disabled]="formG.invalid"
         (click)="onAdd()"
       >
         Add
@@ -45,6 +50,8 @@
       >
         Save
       </button>
+
+      <!-- {{formG.v}} -->
     </div>
     <!-- </div> -->
   </form>

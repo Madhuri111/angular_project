@@ -11,7 +11,6 @@
 // a dynamic form uses a service to create a form based on form model
 export class FormValues<T> {
     // this contains two types of parameters. one of them is value and other one is type options.
-
     // each form field has a unique field to see what is going on in that field
     key:string;
     value:T | undefined;

@@ -22,6 +22,7 @@ export class FormfieldcontrolService {
         default:
           break;
       }
+      // if (validator.length)
       mygroup[input.key] = validator.length > 0 ? new FormControl(input.value || '', validator)
                                         : new FormControl(input.value || '');
     });
@@ -29,24 +30,24 @@ export class FormfieldcontrolService {
     return new FormGroup(mygroup);    
   }
 
-  addFormGroup(inputs:FormValues<string>[]):FormGroup {
-    const mygroup:any={}
+  // addFormGroup(inputs:FormValues<string>[]):FormGroup {
+  //   const mygroup:any={}
 
-    inputs.forEach(input => {
-      let validator: ValidatorFn[] = input.required ? [Validators.required] : [];
-      switch (input.validator) {
-        case "email":
-          validator.push(Validators.email);
-          break;
-        default:
-          break;
-      }
-      mygroup[input.key] = validator.length > 0 ? new FormControl(input.value || '', validator)
-                                        : new FormControl(input.value || '');
-    });
-    return new FormGroup(mygroup);
+  //   inputs.forEach(input => {
+  //     let validator: ValidatorFn[] = input.required ? [Validators.required] : [];
+  //     switch (input.validator) {
+  //       case "email":
+  //         validator.push(Validators.email);
+  //         break;
+  //       default:
+  //         break;
+  //     }
+  //     mygroup[input.key] = validator.length > 0 ? new FormControl(input.value || '', validator)
+  //                                       : new FormControl(input.value || '');
+  //   });
+  //   return new FormGroup(mygroup);
 
-  }
+  // }
 
   getFormFields() {
 

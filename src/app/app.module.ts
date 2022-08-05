@@ -31,6 +31,8 @@ import { MatOptionModule } from '@angular/material/core';
 import { TryComponent } from './try/try.component';
 import { CreateformComponent } from './createform/createform.component';
 // import { CreateformComponent } from './createform/createform.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 import { Basictemplate } from './createform/basictemplate.component';
 import { FinalFormComponent } from './final-form/final-form.component';
@@ -46,8 +48,10 @@ import {MatRadioModule} from '@angular/material/radio';
     PickerModule, 
     MatButtonModule,
     MatRadioModule,
+    MatToolbarModule,
     MatCheckboxModule,
     MatInputModule, 
+    MatIconModule,
     MatSelectModule,
     MatNativeDateModule,
     MatListModule,

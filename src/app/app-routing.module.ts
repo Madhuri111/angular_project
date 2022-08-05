@@ -13,18 +13,18 @@ import { CreateformComponent } from './createform/createform.component';
 import { Basictemplate } from './createform/basictemplate.component';
 import { FinalFormComponent } from './final-form/final-form.component';
 
-const routes: Routes = [
-  {path : 'custom', component : CustomComponent},
-  {path : 'pipes', component : PipesComponent},
-  {path : 'impure', component : ImpurePipesComponent},
-  {path : 'dynamic',component:DynamicComponent},
-  {path: 'change',component:ChangeComponent},
-  {path: 'forms',component:ReactiveFormComponent},
-  {path: 'template',component:TemplateFormComponent},
+export const routes = [
+  {path : 'custom', component : CustomComponent,label:'custom'},
+  {path : 'pipes', component : PipesComponent,label:'Pipes'},
+  {path : 'impure', component : ImpurePipesComponent,label:'Impure Pipes'},
+  {path : 'dynamic',component:DynamicComponent,label:'Dynamic'},
+  {path: 'change',component:ChangeComponent,label:'change'},
+  {path: 'forms',component:ReactiveFormComponent,label:'Forms'},
+  {path: 'template',component:TemplateFormComponent,label:'template forms'},
   {
-    path: 'dynamicforms',component:TryComponent
+    path: 'dynamicforms',component:TryComponent,label:'dynamic forms'
   },
-  {path:'modelform',component:FinalFormComponent},
+  {path:'modelform',component:FinalFormComponent,label:'model forms'},
   {path:'modelform/add',component:FinalFormComponent},
 
 

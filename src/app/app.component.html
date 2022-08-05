@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="sidebar-opener" (click)="sidebarShow = !sidebarShow">
   Click here
 </div>
@@ -9,10 +9,8 @@
       (click)="sidebarShow = !sidebarShow"
   >
 
-<!-- <div class="dropdown"> -->
   <div class="sidebar-content">
-  <!-- <button class="btn"> Tasks</button> -->
-  <!-- <div class="dropdown-content"> -->
+
     <a routerLink="/pipes" >Custom Pipes</a>
     <a routerLink="/dynamic" > Dynamic Components</a>
     <a routerLink="/impure" >Impure pipes</a>
@@ -28,7 +26,45 @@
 </div>
 
 
+-->
+<!-- 
 <div class="container">
   <router-outlet></router-outlet>
-</div>
+</div>  -->
+<!-- <div style="height: 88vh">
 
+</div> -->
+<mat-sidenav-container class="example-container" >
+  <mat-sidenav #sidenav class="example-sidenav"  mode="side" opened="true">
+
+    <mat-nav-list >
+      <mat-list-item>
+        <button  mat-icon-button (click)="isExpanded = !isExpanded">
+          <mat-icon *ngIf="!isExpanded">chevron_right</mat-icon>
+          <mat-icon *ngIf="isExpanded">chevron_left</mat-icon>
+        </button>
+      </mat-list-item>
+      <mat-list-item>
+        <div *ngIf="isExpanded" class="myitems">
+
+      <a 
+        *ngFor="let route of routes"
+        mat-list-item
+        [routerLink]="route.path"
+        (click)="isExpanded = !isExpanded"
+      >
+     {{ route.label }} </a
+      >
+      </div>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- <mat-sidenav-content> -->
+
+
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  <!-- </mat-sidenav-content> -->
+</mat-sidenav-container>

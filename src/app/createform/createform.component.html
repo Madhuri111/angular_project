@@ -13,7 +13,13 @@
                 [id]="input.key"
                 [type]="input.type"
               />
+              <!-- <mat-error *ngIf="input.type">{{getErrorMessage()}}</mat-error> -->
+              <!-- <mat-error *ngIf="!'[formControlName]'.valid && !email.hasError('required')"> -->
+                <!-- Please enter a valid email address -->
+              <!-- </mat-error> -->
+              <!-- <div *ngIf="[formControlType]=email"></div> -->
             </mat-form-field>
+            <!-- <mat-error *ngIf="this.form.controls.['formControlName'].hasError('email')" > Email is invalid</mat-error> -->
           </div>
         </div>
         <!-- </mat-card-content> -->
@@ -109,11 +115,17 @@
             <textarea
               autofocus
               matInput
+              cdkTextareaAutosize
+              #autosize="cdkTextareaAutosize"
+              cdkAutosizeMinRows="1"
+              cdkAutosizeMaxRows="15"
+              maxlength="256"
               class="form-control"
               [formControlName]="input.key"
               [id]="input.key"
-              rows="5"
+              rows="2"
             ></textarea>
+    <mat-hint align="start"><strong>Character max length:256</strong> </mat-hint>
           </mat-form-field>
         </div>
       </mat-card-content>

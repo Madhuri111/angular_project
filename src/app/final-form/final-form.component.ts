@@ -20,14 +20,6 @@ export class FinalFormComponent  {
     // console.log(this.formFields);
   }
 
-  onAdd()
-  {
-
-    // this.formFields
-
-    // this.formFields = service.getFormFields();
-
-  }
 
 }
 

@@ -1,99 +1,37 @@
-.dropdown {
-    display: inline-block;
-  }
-
-  .btn {
-    color:#0099CC; 
-    /* background: transparent; */
-    /* border: 2px solid #0099CC; */
-    /* border-radius: 6px; */
-    /* width: 100%;
-  }
-  .dropdown-content {
-    display: none;
-    /* position: absolute; */
-    width: 100%;
-    overflow: auto;
-    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
-  }
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  .dropdown-content a {
-    display: block;
-    color: #000000;
-    padding: 10px;
-    text-decoration: none;
-  }
-  .dropdown-content a:hover {
-    color: #FFFFFF;
-    background-color: #00A4BD;
-  }
 
 
-.sidebar-opener {
-    cursor:pointer;
-    /* overflow: scroll; */
+
+
+.example-container {
+  
+  /* position: absolute; */
+  width: 100%;
+
+  /* display:contents; */
+  /* /* width: 500px; */
+  height: 100%;
+  /* position: fixed; */
+
+  border: 1px solid rgba(0, 0, 0, 0.5); 
+  
 }
 
-.sidebar-slider {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    background-color: gainsboro;
-    transform: translateX(-100%);
-    transition: ease-in-out 300ms transform;
-    /* overflow:inherit; */
-    /* width: 300px; */
+.myitems{
+  /* padding: 8px 8px 8px 32px; */
+  text-decoration: none;
+  padding-left: 3rem;
+  padding-top: 14rem;
+  
+  /* font-size: 25px; */
+  /* color: #818181; */
+
 }
 
 
-.sidebar-slider.sidebar-slide-in {
-    transform: translateX(0%);
-    transition: ease-in-out 600ms transform;
-}
-
-.sidebar-close {
-    /* position: fixed; */
-    top: 0;
-    right: 0;
-    color: white;
-    /* cursor: pointer; */
-    padding: 16px;
-}
-
-.sidebar-content {
-    display: flex;
-    /* align-items: center; */
-    justify-content: space-around;
-    flex-direction: column;
-    /* padding: 100px; */
-    /* color: white; */
-    text-decoration:none;
-    /* text-align: inherit; */
-    /* overflow: visible; */
-    
-    font-size: 16px;
-    padding: 20px;
-    height: 100%;
-    /* margin-left: 100px; */
-    /* transition: 0.3s; */
 
 
-  }
+
 
 
  
-a:link { text-decoration: none; }
-
-
-a:visited { text-decoration: none; }
-
-
-a:hover { text-decoration: none; }
-
-
-a:active { text-decoration: none; }
-
 

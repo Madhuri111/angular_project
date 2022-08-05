@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormValues } from './models_here/base-formelements';
 import { FormfieldcontrolService } from './createform/formfieldcontrols.service';
 import { Observable } from 'rxjs';
+
+import {routes} from './app-routing.module'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,6 +13,8 @@ import { Observable } from 'rxjs';
 export class AppComponent {
   title = 'custom_structural';
   open = false;
+  routes=routes;
+  isExpanded=false;
   public sidebarShow: boolean = false;
 
   // formFields: Observable<FormValues<any>[]>;
