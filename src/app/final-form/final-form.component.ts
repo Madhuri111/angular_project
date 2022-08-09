@@ -12,7 +12,7 @@ providers : [FormfieldcontrolService]
 })
 export class FinalFormComponent  {
 
-  formFields: Observable<FormValues<any>[]> ;
+  formFields!: Observable<FormValues<any>[]> ;
   constructor(service: FormfieldcontrolService) {
     // console.log(this.formFields);
 

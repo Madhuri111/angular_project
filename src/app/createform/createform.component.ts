@@ -16,6 +16,7 @@ export class CreateformComponent  {
 
   @Input() input: FormValues<string>;
   @Input() form: FormGroup;
+  @Input() index:number;
   @ViewChild('autosize') autosize: CdkTextareaAutosize;
   constructor(private _ngZone: NgZone) {}
 
@@ -24,6 +25,13 @@ export class CreateformComponent  {
   triggerResize() {
     // Wait for changes to be applied, then trigger textarea resize.
     this._ngZone.onStable.pipe(take(1)).subscribe(() => this.autosize.resizeToFitContent(true));
+  }
+
+  getErrorMessage() {
+    if (this.form.controls[this.input.key].hasError('required')) {
+      return 'You must enter a value';
+    }
+    return this.form.controls[this.input.key].hasError('email') ? 'Not a valid email' : '';
   }
 
 }

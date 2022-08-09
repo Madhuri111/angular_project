@@ -34,6 +34,7 @@
 <!-- <div style="height: 88vh">
 
 </div> -->
+
 <mat-sidenav-container class="example-container" >
   <mat-sidenav #sidenav class="example-sidenav"  mode="side" opened="true">
 
@@ -60,11 +61,11 @@
     </mat-nav-list>
   </mat-sidenav>
 
-  <!-- <mat-sidenav-content> -->
+  <mat-sidenav-content> 
 
-
-    <main>
+    <div class="content">
       <router-outlet></router-outlet>
-    </main>
-  <!-- </mat-sidenav-content> -->
+    </div>
+
+  </mat-sidenav-content>
 </mat-sidenav-container>

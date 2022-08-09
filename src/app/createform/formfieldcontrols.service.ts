@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormGroup, ValidatorFn,Validators,FormControl } from '@angular/forms';
-import { of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { FormValues } from '../models_here/base-formelements';
 
 @Injectable({
@@ -49,7 +49,7 @@ export class FormfieldcontrolService {
 
   // }
 
-  getFormFields() {
+  getFormFields() : Observable<FormValues<string>[]> {
 
     const inputs: FormValues<string>[] = [
 
@@ -66,7 +66,7 @@ export class FormfieldcontrolService {
         key: 'email',
         label: 'Email',
         type: 'email',
-        required: true,
+        // required: true,
         validator: "email",
         order: 2
       }),
@@ -88,7 +88,7 @@ export class FormfieldcontrolService {
         key: 'agree',
         label: 'I accept terms and services',
         type: 'checkbox',
-        required: true,
+        // required: true,
         order: 4
       }),
 
@@ -113,12 +113,14 @@ export class FormfieldcontrolService {
       })
     ];
 
-    return of(inputs.sort((a, b) => a.order - b.order));
+    const sortOrder=(inputs.sort((a, b) => a.order - b.order));
+    
+      
+
+      return of(sortOrder);
+
+
+
   }
-
-
-
-
-
   
 }

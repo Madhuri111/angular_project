@@ -40,7 +40,7 @@ export class FormValues<T> {
         options?: { key: string; value: string }[];
     }={})
     {
-        this.value=optionss.value  ;
+        this.value=optionss.value || undefined ;
         this.key = optionss.key || "";
         this.label = optionss.label || "";
         this.required = !!optionss.required;

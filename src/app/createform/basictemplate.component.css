@@ -1,15 +1,17 @@
 .myform{
     /* padding-left: 100px; */
     /* padding-right: 100px; */
-    display: flex;
+    /* display: flex;
     /* margin:auto; */
-    margin-left: 10rem;
+    margin: 1rem;
     /* width: 40%; */
     /* height: auto; */
-    align-items: center;
-    text-align: center;
-    padding: 3rem 3rem;
-
+    /* align-items: center; */
+    /* text-align: center; */
+    padding: 3rem 3rem; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
     /* padding: 5px; */
     /* white-space: nowrap; */
     /* display: inline; */
@@ -36,4 +38,16 @@
     padding-left: 0px;
     display: inline;
     /* padding-bottom: 1000px; */
+}
+.card {
+    margin-left: 20px;
+}
+.delete-btn {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+mat-icon {
+    font-size: 15px;
+    margin-top: -17px;
 }

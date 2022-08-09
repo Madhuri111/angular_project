@@ -41,11 +41,13 @@ import { PickerModule } from '@ctrl/ngx-emoji-mart';
 import { MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [Basictemplate, HighlightPipe,TryComponent,AppComponent,CustomComponent,DynamicComponent,ImpurePipesComponent,PipesComponent, ImpPipePipe, ChangeComponent, IfDirective, TemplateFormComponent, ReactiveFormComponent,  TryComponent, CreateformComponent, FinalFormComponent],
   imports: [
     PickerModule, 
+    MatTableModule,
     MatButtonModule,
     MatRadioModule,
     MatToolbarModule,
