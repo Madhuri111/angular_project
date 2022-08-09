@@ -3,6 +3,7 @@ import { FormValues } from '../models_here/base-formelements';
 import { FormfieldcontrolService } from './formfieldcontrols.service';
 import { Input, OnInit, Component, ElementRef, AfterViewInit, OnChanges } from '@angular/core';
 import { AbstractControl } from '@angular/forms';
+import { MatTableDataSource } from '@angular/material/table';
 // import { FormValues } from '../models_here/base-formelements';
 
 export interface OutputTypes {
@@ -31,12 +32,13 @@ export class Basictemplate implements OnInit,OnChanges {
   // finalform: FormArray = new FormArray([]);
   payLoad = {};
   testform: FormGroup;
-  displayedColumns:any=['name'];
+  // displayedColumns:string[]=['name','email','sex','country',''];
   
 
-  // displayedColumns:any=['name','email','country','sex','message'];
+  displayedColumns:any=['name','email','country','message'];
   dataPur:any[] = [];
   hey: any;
+  dataSource: MatTableDataSource<any>;
 
   constructor(private formfieldService: FormfieldcontrolService, private elementRef: ElementRef,
     private fb: FormBuilder
@@ -51,6 +53,11 @@ export class Basictemplate implements OnInit,OnChanges {
         this.formFields?this.formfieldService.toFormGroup(this.formFields):null
       ])
     });
+
+    this.testform.get('studentForms').valueChanges.subscribe(students => {
+      console.log('students', students)
+    // this.someOtherFun()
+  });
   }
 
   ngOnChanges() {
@@ -69,6 +76,14 @@ export class Basictemplate implements OnInit,OnChanges {
     // console.log("data hereee");
     this.createDataSource(0);
     // console.log(this.dataPur);
+    // this.dataSource = new MatTableDataSource((this.testform.get('studentForms') as FormArray).controls);;
+  this.someOtherFun();
+    console.log('datasource')
+  console.log(this.dataSource)
+  }
+
+  someOtherFun () {
+   this.dataSource = new MatTableDataSource((this.testform.get('studentForms') as FormArray).controls);
   }
 
   createDataSource(index:number) 
@@ -173,6 +188,7 @@ export class Basictemplate implements OnInit,OnChanges {
 
   removeStudentOnClick(studentIndex : number){
     (<FormArray>this.testform.get('studentForms')).removeAt(studentIndex);
+    this.someOtherFun();
   }
   onAdd() {
     this.formFields?(<FormArray>this.testform.get('studentForms')).push(this.formfieldService.toFormGroup(this.formFields)) :null;

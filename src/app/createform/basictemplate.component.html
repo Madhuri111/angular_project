@@ -55,17 +55,16 @@
 </div>
 
 
-<h5>Details</h5>
 <!-- <div > -->
   <!-- <div  *ngFor="let fun of getStudentControls() ;let i = index"> -->
-    <div  *ngFor="let fun of dataPur ;let i = index">
+    <!-- <div  *ngFor="let fun of dataPur ;let i = index"> -->
 <!-- 
       <p>{{fun['name'] | json}}</p>
       <p>{{fun['email'] | json}}</p>
       <p>{{fun['sex'] | json}}</p>
       <p>{{fun['country'] | json}}</p>
       <p>{{fun['message'] | json}}</p> -->
-    <table class="table">
+    <!-- <table class="table">
       <thead>
         <tr>
           <th scope="col">Name</th>
@@ -85,35 +84,71 @@
       </tbody>
     </table>
 
-    </div>
+    </div> -->
     <!-- <div  *ngFor="let fun of dataPur ;let i = index"> -->
-<!-- 
-<div  *ngFor="let fun of getStudentControls() ;let i = index">
 
-<mat-table [dataSource]="dataPur[i]">
+<div class="wrapper">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
       <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef>Name</th>
-    <td mat-cell *matCellDef="let element ">{{element[i].name}}</td>
+    <td mat-cell *matCellDef="let element ">{{element.get('name').value}}</td>
   </ng-container>
   <ng-container matColumnDef="email">
     <th mat-header-cell *matHeaderCellDef>Email</th>
-    <td mat-cell *matCellDef="let element">{{element[i].email}</td>
+    <td mat-cell *matCellDef="let element">{{element.get('email').value}}</td>
   </ng-container>
-  <ng-container matColumnDef="sex">
-    <th mat-header-cell *matHeaderCellDef>Sex</th>
-    <td mat-cell *matCellDef="let element">{{element[i].sex}}</td>
-  </ng-container>
+
   <ng-container matColumnDef="country">
     <th mat-header-cell *matHeaderCellDef>country</th>
-    <td mat-cell *matCellDef="let element">{{element[i].country}}</td>
+    <td mat-cell *matCellDef="let element">{{element.get('country').value}}</td>
   </ng-container>
   <ng-container matColumnDef="message">
     <th mat-header-cell *matHeaderCellDef>message</th>
-    <td mat-cell *matCellDef="let element">{{element[i].message}}</td>
+    <td mat-cell *matCellDef="let element">{{element.get('message').value}}</td>
   </ng-container>
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
-</mat-table>
-</div> -->
+</table>
+</div>
+
+
+
+    <!-- <form [formGroup]="testform">
+
+    <mat-table [dataSource]="dataSource">
+
+      <ng-container cdkColumnDef="name">
+        <mat-header-cell *cdkHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *cdkCellDef="let row let rowIndex = index"  [formGroupName]="rowIndex"> 
+          <input type="text" size="2" formControlName="name"> </mat-cell>
+      </ng-container>
+
+
+      <ng-container cdkColumnDef="email">
+        <mat-header-cell *cdkHeaderCellDef> Email </mat-header-cell>
+        <mat-cell *cdkCellDef="let row let rowIndex = index"  [formGroupName]="rowIndex"> 
+          <input type="text" size="7" formControlName="email">
+        </mat-cell>
+      </ng-container> -->
+
+        <!-- <ng-container cdkColumnDef="weight">
+        <mat-header-cell *cdkHeaderCellDef> Weight </mat-header-cell>
+        <mat-cell *cdkCellDef="let row let rowIndex = index"  [formGroupName]="rowIndex"> 
+          <input type="text" size="3" formControlName="weight">
+        </mat-cell>
+      </ng-container>
+
+        <ng-container cdkColumnDef="symbol">
+        <mat-header-cell *cdkHeaderCellDef> Symbol </mat-header-cell>
+        <mat-cell *cdkCellDef="let row let rowIndex = index"  [formGroupName]="rowIndex"> 
+          <input type="text" size="2" formControlName="symbol">
+        </mat-cell>
+      </ng-container> -->
+
+      <!-- Header and Row Declarations -->
+      <!-- <mat-header-row *cdkHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *cdkRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </form> -->
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormValues } from './models_here/base-formelements';
 import { FormfieldcontrolService } from './createform/formfieldcontrols.service';
 import { Observable } from 'rxjs';
@@ -15,7 +15,9 @@ export class AppComponent {
   open = false;
   routes=routes;
   isExpanded=false;
+  sideBarOpen=true;
   public sidebarShow: boolean = false;
+  @Output() toggleSidebarForMe: EventEmitter<any> = new EventEmitter();
 
   // formFields: Observable<FormValues<any>[]>;
   // constructor(service: FormfieldcontrolService) {
@@ -26,5 +28,12 @@ export class AppComponent {
   // }
   close() {
     this.open = false;
+  }
+  sideBarToggler()
+  {
+    this.sideBarOpen=!this.sideBarOpen;
+  }
+  toggleSidebar() {
+    this.toggleSidebarForMe.emit();
   }
 }

@@ -42,6 +42,7 @@ import { MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatTableModule} from '@angular/material/table';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [Basictemplate, HighlightPipe,TryComponent,AppComponent,CustomComponent,DynamicComponent,ImpurePipesComponent,PipesComponent, ImpPipePipe, ChangeComponent, IfDirective, TemplateFormComponent, ReactiveFormComponent,  TryComponent, CreateformComponent, FinalFormComponent],
@@ -50,6 +51,7 @@ import {MatTableModule} from '@angular/material/table';
     MatTableModule,
     MatButtonModule,
     MatRadioModule,
+    MatMenuModule,
     MatToolbarModule,
     MatCheckboxModule,
     MatInputModule, 

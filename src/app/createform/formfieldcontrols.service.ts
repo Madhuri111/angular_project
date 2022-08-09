@@ -66,7 +66,7 @@ export class FormfieldcontrolService {
         key: 'email',
         label: 'Email',
         type: 'email',
-        // required: true,
+        required: true,
         validator: "email",
         order: 2
       }),
@@ -88,7 +88,7 @@ export class FormfieldcontrolService {
         key: 'agree',
         label: 'I accept terms and services',
         type: 'checkbox',
-        // required: true,
+        required: true,
         order: 4
       }),
 
